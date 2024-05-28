@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <title>DrivenEats</title>
+</head>
+
+<body>
+    <header>
+        <h1>DrivenEats</h1>
+        <h2>Makanan Anda dalam 6 menit</h2>
+    </header>
+    <main id="main-content">
+        <!-- Halaman Pemilihan Menu -->
+        <div id="menu-selection">
+            <h3>Pertama, pilih hidangan utama Anda</h3>
+            <span class="dish_section">
+                <div class="dish main_dish" onclick="meal_clicked(this)">
+                    <img src="images/frango_yin_yang 2.png">
+                    <h4>Ayam goreng</h4>
+                    <p>Ayam goreng untuk sehari-hari Anda</p>
+                    <div class="price">Rp 14.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <div class="sub_menu display_none">
+                        <h5>Pilih lauk pauk:</h5>
+                        <button onclick="select_submenu_item(this, 'Saos matah')">Saos matah</button>
+                        <button onclick="select_submenu_item(this, 'saus teriyaki')">saus teriyaki</button>
+                    </div>
+                </div>
+                <div class="dish main_dish" onclick="meal_clicked(this)">
+                    <img src="images/frango_teryaki.PNG">
+                    <h4>Ayam Teriyaki</h4>
+                    <p>Klasik, lebih baik dari yang di Subway</p>
+                    <div class="price">Rp 12.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <div class="sub_menu display_none">
+                        <h5>Pilih lauk pauk:</h5>
+                        <button onclick="select_submenu_item(this, 'Nasi')">Nasi</button>
+                        <button onclick="select_submenu_item(this, 'Sayuran')">Sayuran</button>
+                    </div>
+                </div>
+                <div class="dish main_dish" onclick="meal_clicked(this)">
+                    <img src="images/parmegiana.jpg">
+                    <h4>Ayam Parmesan</h4>
+                    <p>Lebih baik dari ini hanya dua dari ini...</p>
+                    <div class="price">Rp 17.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <div class="sub_menu display_none">
+                        <h5>Pilih lauk pauk:</h5>
+                        <button onclick="select_submenu_item(this, 'sambal matah')">sambal matah</button>
+                        <button onclick="select_submenu_item(this, 'sambal bawang')">sambal bawang</button>
+                    </div>
+                </div>
+            </span>
+
+            <h3>Sekarang, pilih minuman Anda</h3>
+            <div class="dish_section">
+                <div class="dish drink_dish" onclick="meal_clicked(this)">
+                    <img src="images/coquinha_gelada 1.png">
+                    <h4>Coca-Cola dingin</h4>
+                    <p>Kaleng 350ml</p>
+                    <div class="price">Rp 4.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="dish drink_dish" onclick="meal_clicked(this)">
+                    <img src="images/guarana.PNG">
+                    <h4>Guarana dingin</h4>
+                    <p>Kaleng 350ml</p>
+                    <div class="price">Rp 5.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="dish drink_dish" onclick="meal_clicked(this)">
+                    <img src="images/fanta.PNG">
+                    <h4>Fanta dingin</h4>
+                    <p>Kaleng 350ml</p>
+                    <div class="price">Rp 3.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3>Terakhir, pilih makanan penutup Anda</h3>
+            <div class="dish_section">
+                <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                    <img src="images/pudim 1.png">
+                    <h4>Puding</h4>
+                    <p>Hanya puding</p>
+                    <div class="price">Rp 7.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                    <img src="images/receita-de-bolo-de-chocolate-fofinho.jpeg">
+                    <h4>Kue</h4>
+                    <p>Hanya kue</p>
+                    <div class="price">Rp 5.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                    <img src="images/torta-de-limao.jpg">
+                    <h4>Pie Lemon</h4>
+                    <p>Hanya pie lemon</p>
+                    <div class="price">Rp 9.900</div>
+                    <div class="dish_check display_none">
+                        <img src="images/Vector (1).png">
+                    </div>
+                    <select class="quantity display_none" onchange="update_quantity(this)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman Konfirmasi Pesanan -->
+        <div id="order-confirmation" class="display_none">
+            <h3>Konfirmasi Pesanan Anda</h3>
+            <div id="order-details">
+                <span>
+                    <p class='final_order_meal_name'></p>
+                    <p class='final_order_meal_price'></p>
+                </span>
+                <span>
+                    <p class='final_order_meal_name'></p>
+                    <p class='final_order_meal_price'></p>
+                </span>
+                <span>
+                    <p class='final_order_meal_name'></p>
+                    <p class='final_order_meal_price'></p>
+                </span>
+            </div>
+            <div class="final_order_total">
+                <p>Total</p>
+                <p class='final_order_meal_total_price'></p>
+            </div>
+
+            <label for="payment_method">Pilih metode pembayaran:</label>
+            <select id="payment_method">
+                <option value="Uang Tunai">Uang Tunai</option>
+                <option value="Kartu">Kartu</option>
+            </select>
+
+            <div class="footer_buttons">
+                <button class="cancel_button" onclick="cancel_order()">Batal</button>
+                <button class="confirm_button" onclick="ask_name_and_address()">Selesai</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button class="order_button" onclick="release_confirm_section()">Pilih 3 item <br> untuk menutup pesanan</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
