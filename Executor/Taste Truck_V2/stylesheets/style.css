@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: #F6F6F6;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 92px;
+    padding: 0px 21px;
+    background-color: #252525;
+    box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.488);
+}
+
+header h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FED65F;
+}
+
+main {
+    margin: 123px 0px;
+    overflow: hidden;
+}
+
+main h3 {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.dish_section {
+    display: flex;
+    align-items: center;
+    height: 230px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+
+.dish {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 176px;
+    height: 216px;
+    margin: 0px 10px;  
+    padding: 10px 15px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.488);
+    background-color: #FED65F;
+}
+
+img {
+    width: 144px;
+    height: 87px;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+
+h4 {
+    font-family: 'Roboto'; 
+    font-size: 16px;
+    font-weight: 700;
+    color:  #252525;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+    color: #252525;
+}
+
+.price {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+/*Reponsive js section - begin*/
+
+.dish_box_check {
+    border: 4px solid #32B72F;
+}
+
+
+.dish_check img {
+    height: 15px;
+    width: 15px;
+}
+
+.dish_check {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+}
+
+/*Reponsive js section - end*/
+
+footer {
+    z-index: 1;
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 92px;
+    background-color: #252525;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.488);
+}
+
+footer .transparent_background {
+    position: fixed;
+    top: 0;
+    width : 100%;  
+    height : 100%;
+    background: rgba(255, 255, 255, 0.59);
+    z-index: 1;
+}
+
+footer .confirm_section {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    top: calc(50% - 353px/2);
+    left: auto;
+    background-color: #FED65F;
+    box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.488);
+    width: 377px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    z-index: 2;
+}
+
+footer .confirm_section span {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+footer .confirm_section h5 {
+    font-weight: 700;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    
+}
+
+footer p {
+    font-weight: 400;
+}
+
+footer label {
+    font-family: 'Roboto';
+    color: #252525;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+footer p, footer .confirm_section h5 {
+    font-family: 'Roboto';
+    color: #252525;
+    font-size: 22px;
+}
+
+footer .confirm_section .final_price p {
+    font-weight: 700;
+}
+
+footer .final_order_order_button{
+    height: 61px;
+    width: 364px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    border: 0px;
+    background-color: #FED65F;
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 700;
+    color: #252525;
+}
+
+
+footer .order_button{
+    height: 61px;
+    width: 364px;
+    border-radius: 50px;
+    border: 0px;
+    background-color: #CBCBCB;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.018em;  
+    padding: 0px 70px;  
+    color: #252525;
+}
+
+footer .order_button_ready{
+    background-color: #FED65F;
+}
+
+.display_none {
+    display: none !important;
+}
+
+#payment_method {
+    width: 100%; /* Full width for better responsiveness */
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #252525;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-top: 10px; /* Spacing above the select box */
+    margin-bottom: 10px;
+}
+
+/* Adding a custom arrow icon */
+#payment_method::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+/* Container to help with positioning the custom arrow */
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Full width to match the select box */
+}
+
+/* Hover effect */
+#payment_method:hover {
+    border-color: #FFEFBD;
+    background-color: #e2e6ea;
+}
+
+/* Focus effect */
+#payment_method:focus {
+    outline: none;
+    border-color: #252525;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.quantity_control {
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity_button {
+    background-color: #252525;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.quantity_button:hover {
+    background-color: #252525;
+}
+
+.quantity_input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 5px;
+}

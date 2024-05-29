@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <title>Rumah Toast</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rumah Toast</h1>
+        <h2>Karangploso, Malang, Jawatimur</h2>
+    </header>
+    <main>
+        <h3>Souffle Pancake</h3>
+        <span class="dish_section">
+            <div class="dish main_dish" onclick="meal_clicked(this)">
+                <img src="images/red-velvet-oreo-cookie-pancakes-pov-sfvrsn=0.jpg">
+                <h4>Redvelvet Oreo</h4>
+                <p>fluffy pancake glaze redvelvet taburan oreo</p>
+                <div class="price">Rp 20,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+                <!-- <div class="quantity_control">
+                    <button class="quantity_button" onclick="decrease_quantity(event)">-</button>
+                    <input type="text" value="1" class="quantity_input" readonly>
+                    <button class="quantity_button" onclick="increase_quantity(event)">+</button>
+                </div> -->
+            </div>
+            <div class="dish main_dish" onclick="meal_clicked(this)">
+                <img src="images/th.jpeg">
+                <h4>Chocolate Peanute</h4>
+                <p>Fluffy pancake glaze Coklat taburan kacang</p>
+                <div class="price">Rp 20,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+            <div class="dish main_dish" onclick="meal_clicked(this)">
+                <img src="images/Tiramisu-Souffle-Hotcakes-3.jpg">
+                <h4>Tiramisu</h4>
+                <p>Fluffy pancake glaze tiramisu</p>
+                <div class="price">Rp 25,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+        </span>
+
+        <h3>Milk Base</h3>
+        <div class="dish_section">
+            <div class="dish drink_dish" onclick="meal_clicked(this)">
+                <img src="images/minuman black.jpeg">
+                <h4>Vanilla Black Cookies</h4>
+                <p>Medium</p>
+                <div class="price">Rp 14,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+            <div class="dish drink_dish" onclick="meal_clicked(this)">
+                <img src="images/cookies and cream (1).jpeg">
+                <h4>Cookies and Cream</h4>
+                <p>Medium</p>
+                <div class="price">Rp 16,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+            <div class="dish drink_dish" onclick="meal_clicked(this)">
+                <img src="images/red velvet (1).jpeg">
+                <h4>Redvelvet</h4>
+                <p>Medium</p>
+                <div class="price">Rp 12,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+        </div>
+
+        <h3>Frappe</h3>
+        <div class="dish_section">
+            <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                <img src="images/caramel.jpeg">
+                <h4>Caramel Frappe</h4>
+                <p>Apenas pudim</p>
+                <div class="price">Rp 30,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+            <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                <img src="images/vanila black cookis(1).jpeg">
+                <h4>Cookies And Cream Frappe</h4>
+                <p>Apenas bolo</p>
+                <div class="price">Rp 35,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+            <div class="dish dessert_dish" onclick="meal_clicked(this)">
+                <img src="images/mocca.jpeg">
+                <h4>Mocha Frapper</h4>
+                <p>Apenas torta</p>
+                <div class="price">Rp 36,000</div>
+                <div class="dish_check display_none">
+                    <img src="images/Vector (1).png">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="transparent_background display_none">
+        </div>
+        <div class="confirm_section display_none">
+            <h5>Konfirmasi Pesanan</h5>
+            <span>
+                <!--Will be set through js-->
+                <p class='final_order_meal_name'></p>
+                <p class='final_order_meal_price'></p>
+            </span>
+            <span>
+                <!--Will be set through js-->
+                <p class='final_order_meal_name'></p>
+                <p class='final_order_meal_price'></p>
+            </span>
+            <span>
+                <!--Will be set through js-->
+                <p class='final_order_meal_name'></p>
+                <p class='final_order_meal_price'></p>
+            </span>
+            <span class='final_price'>
+                <!--Will be set through js-->
+                <p>TOTAL</p>
+                <p class='final_order_meal_total_price'></p>
+            </span>
+
+            <label for="payment_method">Pilih metode pembayaran:</label>
+            <select id="payment_method">
+                <option value="Uang Tunai">Uang Tunai</option>
+                <option value="Kartu">Kartu</option>
+            </select>
+
+            <button class="final_order_order_button" onclick="ask_name_and_adress()">Pesan dan Antar</button>
+            <p class="cancel_order" onclick="cancel_order()">Batalkan</p>
+        </div>
+
+        <button class="order_button" onclick="release_confirm_section()">
+            Pilih 3 Menu
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
